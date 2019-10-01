@@ -7,4 +7,5 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="btn_enter_txt">Войти</string>
+    <string name="btn_close_all_txt">Закрыть</string>
 </resources>
