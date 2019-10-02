@@ -2,10 +2,11 @@
     <string name="app_name">GB_MaterialDesign</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Заглушка№2 на Drawer</string>
-    <string name="nav_header_subtitle">Заглушка№1 на Drawer</string>
+    <string name="nav_header_title">Здесь будет текст,</string>
+    <string name="nav_header_subtitle">но это не точно</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="btn_enter_txt">Войти</string>
     <string name="btn_close_all_txt">Закрыть</string>
+    <string name="image">Image</string>
 </resources>

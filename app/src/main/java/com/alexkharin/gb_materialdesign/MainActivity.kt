@@ -9,6 +9,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -64,6 +65,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val intent = Intent(this,LoginActivity::class.java)
                 startActivity(intent)
             }
+            R.id.nav_fruits -> {
+                val imageView = findViewById<ImageView>(R.id.image_show)
+                imageView.setImageResource(R.drawable.img_fruits)
+            }
+            R.id.nav_vegetables -> {
+                val imageView = findViewById<ImageView>(R.id.image_show)
+                imageView.setImageResource(R.drawable.img_vegetables)
+            }
+            R.id.nav_nature -> {
+                val imageView = findViewById<ImageView>(R.id.image_show)
+                imageView.setImageResource(R.drawable.img_nature)
+            }
+
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
