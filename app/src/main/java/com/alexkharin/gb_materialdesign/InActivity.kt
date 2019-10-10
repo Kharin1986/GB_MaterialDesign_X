@@ -6,6 +6,11 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.Toolbar
+import android.content.Intent
+import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_in.*
+import kotlinx.android.synthetic.main.app_bar_main.*
+
 
 class InActivity : AppCompatActivity() {
 
@@ -13,12 +18,30 @@ class InActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_in)
 
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        fab_in.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-      //  supportActionBar!!.setLogo(R.mipmap.ic_launcher)
 
+        val intent = intent
+
+        val type = intent.getStringExtra("type")
+        when(type){
+            "nature" ->{
+                imageView2.setImageResource(R.drawable.img_nature)
+            }
+            "fruits" ->{
+                imageView2.setImageResource(R.drawable.img_fruits)
+            }
+            "vegetables" ->{
+                imageView2.setImageResource(R.drawable.img_vegetables)
+            }
+        }
     }
 
 

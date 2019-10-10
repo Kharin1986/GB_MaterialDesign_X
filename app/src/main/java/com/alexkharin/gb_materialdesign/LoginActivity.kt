@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
     }
     fun login(view: View){
-        val intentToInActivity = Intent(this,InActivity::class.java)
+        val intentToInActivity = Intent(this,MainActivity::class.java)
         if(username.length()>0) {
             startActivity(intentToInActivity)
         } else {

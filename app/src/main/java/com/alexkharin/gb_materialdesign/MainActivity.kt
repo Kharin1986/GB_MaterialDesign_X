@@ -60,24 +60,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
+        val imageView = findViewById<ImageView>(R.id.imageView2)
         when (item.itemId) {
             R.id.nav_login -> {
                 val intent = Intent(this,LoginActivity::class.java)
                 startActivity(intent)
             }
             R.id.nav_fruits -> {
-                val imageView = findViewById<ImageView>(R.id.image_show)
-                imageView.setImageResource(R.drawable.img_fruits)
+                val intent1 = Intent(this,InActivity::class.java)
+                intent1.putExtra("type", "fruits");
+                startActivity(intent1)
             }
             R.id.nav_vegetables -> {
-                val imageView = findViewById<ImageView>(R.id.image_show)
-                imageView.setImageResource(R.drawable.img_vegetables)
+                val intent1 = Intent(this,InActivity::class.java)
+                intent1.putExtra("type", "vegetables");
+                startActivity(intent1)
+
             }
             R.id.nav_nature -> {
-                val imageView = findViewById<ImageView>(R.id.image_show)
-                imageView.setImageResource(R.drawable.img_nature)
+                val intent1 = Intent(this,InActivity::class.java)
+                intent1.putExtra("type", "nature");
+                startActivity(intent1)
             }
-
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
